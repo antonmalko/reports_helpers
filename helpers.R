@@ -276,7 +276,7 @@ prepare_named_report <- function(proj.name, tags, values, tag.delim = ".",
   # If we compiled report and also want to open it automatically in a browser
   if (compile.report & open.compiled){
     if (file.exists(file.path(output.folder, compiled_report))){
-      rstudioapi::viewer(file.path(output.folder, compiled_report))
+      utils::browseURL(file.path(output.folder, compiled_report))
     }
   }
   
